@@ -1,3 +1,5 @@
+
+
 export const state = {
   pricingOptions: [
     {
@@ -44,6 +46,14 @@ export const getters = {
   pricingOptions(state) {
     return state.pricingOptions;
   },
+  chosenPlan(state) {
+    return state.chosenPlan;
+  },
 };
 
-export const mutations = {};
+export const mutations = {
+  selectPlan(state, plan) {
+    state.chosenPlan=plan;
+    console.log(state.chosenPlan);
+  }
+};

@@ -15,7 +15,19 @@
         </p>
       </b-col>
     </b-row>
+  <div>
+  <b-card-group deck class="justify-content-center">
+    <div v-for="option in this.$store.state.pricingOptions" :key="option.name">
+    <PricingCard :features=option.features :price=option.cost :name=option.name :buttonText=option.cta :paid=option.paid ></PricingCard>
+    </div>
+    
+  </b-card-group>
+  
+</div>
   </b-container>
+  
+  
+  
 </template>
 
 <script>
@@ -31,4 +43,5 @@ p {
   color: #6c757d;
   font-size: 1.25rem;
 }
+
 </style>
